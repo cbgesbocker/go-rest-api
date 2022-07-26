@@ -1,0 +1,1 @@
+ docker build --tag docker-gs-ping2 .
