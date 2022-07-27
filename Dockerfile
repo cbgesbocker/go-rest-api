@@ -10,9 +10,9 @@ COPY go.sum ./
 
 COPY *.go ./
 
-COPY ./controllers ./controllers
+COPY ./main.go ./
 
-COPY ./models ./models
+COPY ./src ./src
 
 RUN go mod download
 
@@ -20,4 +20,4 @@ RUN go build -o ./docker-gs-ping
 
 EXPOSE 8080
 
-ENTRYPOINT [ "./docker-gs-ping" ]
+ENTRYPOINT [ "go", "run", "main.go" ]

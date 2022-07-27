@@ -1,1 +1,1 @@
-docker run -p 8080:8080 -v "${PWD}/test.db:/app/test.db" docker-gs-ping2
+docker run -p 8080:8080 -v "${PWD}/src:/app/src" docker-gs-ping2

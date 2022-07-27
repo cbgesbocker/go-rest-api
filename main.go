@@ -1,9 +1,9 @@
 package main
 
 import (
-	"example.com/m/api"
-	"example.com/m/controllers"
-	"example.com/m/models"
+	"example.com/m/src/api"
+	"example.com/m/src/controllers"
+	"example.com/m/src/models"
 	"github.com/gin-gonic/gin"
 )
 
