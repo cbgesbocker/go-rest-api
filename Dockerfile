@@ -1,8 +1,8 @@
-FROM golang:alpine3.15
+FROM cosmtrek/air:v1.40.4
 
 WORKDIR /app
 
-RUN apk add build-base
+# RUN apk add build-base
 
 COPY go.mod ./
 
@@ -12,12 +12,12 @@ COPY *.go ./
 
 COPY ./main.go ./
 
+COPY ./.air.conf ./
+
 COPY ./src ./src
 
 RUN go mod download
 
-RUN go build -o ./docker-gs-ping
-
 EXPOSE 8080
 
-ENTRYPOINT [ "go", "run", "main.go" ]
+ENTRYPOINT [ "air", "-c", ".air.conf" ]

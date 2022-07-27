@@ -1,1 +1,1 @@
- docker build --tag docker-gs-ping2 .
+ docker build --tag app2 .
