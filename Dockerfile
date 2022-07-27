@@ -14,8 +14,6 @@ COPY ./controllers ./controllers
 
 COPY ./models ./models
 
-VOLUME [ "./data", "./data" ]
-
 RUN go mod download
 
 RUN go build -o ./docker-gs-ping
